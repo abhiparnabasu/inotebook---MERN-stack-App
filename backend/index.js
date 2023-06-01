@@ -1,5 +1,6 @@
 const connectToMongo = require('./db');
 const express = require('express')
+<<<<<<< HEAD
 const cors = require('cors')
 
 connectToMongo();
@@ -17,4 +18,17 @@ app.use('/api/notes',require('./routes/notes'))
 
 app.listen(port, () => {
   console.log(`iNotebook Backend listening on port http://localhost:${port}`)
+=======
+
+connectToMongo();
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send('Hello Rupam!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port http://localhost:${port}`)
+>>>>>>> ffcc63c (43 commit)
 })
